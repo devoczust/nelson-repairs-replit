@@ -33,7 +33,7 @@ export default function Home() {
                 Mais de 35 anos de experiência em serviços residenciais.
               </p>
               <div className="flex space-x-4">
-                <a href="https://wa.me/5541999999999" className="text-whatsapp hover:text-green-400 transition-colors">
+                <a href="https://wa.me/5541999023899" className="text-whatsapp hover:text-green-400 transition-colors">
                   <i className="fab fa-whatsapp text-2xl"></i>
                 </a>
               </div>
@@ -54,8 +54,8 @@ export default function Home() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Contato</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><i className="fab fa-whatsapp mr-2"></i>(41) 99999-9999</li>
-                <li><i className="fas fa-envelope mr-2"></i>nelson.oczust@email.com</li>
+                <li><i className="fab fa-whatsapp mr-2"></i>(41) 99902-3899</li>
+                <li><i className="fas fa-envelope mr-2"></i>nelsonoczust1975@gmail.com</li>
                 <li><i className="fas fa-map-marker-alt mr-2"></i>Curitiba e Região</li>
               </ul>
             </div>

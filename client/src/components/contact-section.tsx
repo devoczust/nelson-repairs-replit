@@ -235,7 +235,7 @@ export default function ContactSection() {
                   <p className="text-sm text-center text-gray-600">
                     <strong>Prefere WhatsApp?</strong>{" "}
                     <a 
-                      href="https://wa.me/5541999999999?text=Olá! Gostaria de solicitar um orçamento." 
+                      href="https://wa.me/5541999023899?text=Olá! Gostaria de solicitar um orçamento." 
                       className="text-whatsapp hover:underline font-medium"
                     >
                       Clique aqui para conversar diretamente

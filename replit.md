@@ -88,6 +88,7 @@ This is a full-stack web application for Nelson Oczust's handyman services busin
 
 ## Changelog
 - June 18, 2025. Initial setup
+- June 18, 2025. Updated contact information: phone number to 41999023899, email to nelsonoczust1975@gmail.com, work hours (removed Saturday), fixed button styling, and replaced hero image
 
 ## User Preferences
 
