@@ -23,7 +23,7 @@ export default function HeroSection() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="https://wa.me/5541999999999?text=Olá! Gostaria de solicitar um orçamento." 
+                href="https://wa.me/5541999023899?text=Olá! Gostaria de solicitar um orçamento." 
                 className="bg-whatsapp hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center"
               >
                 <i className="fab fa-whatsapp mr-2 text-lg"></i>
@@ -33,7 +33,7 @@ export default function HeroSection() {
                 onClick={scrollToServices}
                 variant="outline"
                 size="lg"
-                className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 font-semibold"
+                className="border-2 border-white text-primary bg-white hover:bg-gray-100 px-8 py-4 font-semibold"
               >
                 Ver Serviços
               </Button>
@@ -41,8 +41,8 @@ export default function HeroSection() {
           </div>
           <div className="relative">
             <img 
-              src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-              alt="Handyman profissional trabalhando" 
+              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+              alt="Profissional trabalhando em reforma residencial" 
               className="rounded-xl shadow-2xl w-full h-auto"
             />
             <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg">

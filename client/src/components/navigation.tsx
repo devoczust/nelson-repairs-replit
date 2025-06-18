@@ -58,7 +58,7 @@ export default function Navigation() {
           
           <div className="flex items-center space-x-4">
             <a 
-              href="https://wa.me/5541999999999" 
+              href="https://wa.me/5541999023899" 
               className="bg-whatsapp hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors hidden sm:flex items-center"
             >
               <i className="fab fa-whatsapp mr-2"></i>WhatsApp
@@ -111,7 +111,7 @@ export default function Navigation() {
                 Contato
               </button>
               <a 
-                href="https://wa.me/5541999999999" 
+                href="https://wa.me/5541999023899" 
                 className="bg-whatsapp hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors inline-flex items-center justify-center sm:hidden"
               >
                 <i className="fab fa-whatsapp mr-2"></i>WhatsApp

@@ -96,7 +96,7 @@ export default function ServicesSection() {
 
         <div className="text-center mt-12">
           <a 
-            href="https://wa.me/5541999999999?text=Olá! Gostaria de saber mais sobre os serviços disponíveis." 
+            href="https://wa.me/5541999023899?text=Olá! Gostaria de saber mais sobre os serviços disponíveis." 
             className="bg-whatsapp hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors inline-flex items-center"
           >
             <i className="fab fa-whatsapp mr-2 text-lg"></i>

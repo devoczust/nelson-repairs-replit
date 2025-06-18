@@ -97,8 +97,8 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">WhatsApp</h4>
-                  <p className="text-gray-600">(41) 99999-9999</p>
-                  <a href="https://wa.me/5541999999999" className="text-whatsapp hover:underline">
+                  <p className="text-gray-600">(41) 99902-3899</p>
+                  <a href="https://wa.me/5541999023899" className="text-whatsapp hover:underline">
                     Clique para conversar
                   </a>
                 </div>
@@ -110,7 +110,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">E-mail</h4>
-                  <p className="text-gray-600">nelson.oczust@email.com</p>
+                  <p className="text-gray-600">nelsonoczust1975@gmail.com</p>
                 </div>
               </div>
 
@@ -130,7 +130,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Horário de Atendimento</h4>
-                  <p className="text-gray-600">Segunda a Sábado: 8h às 18h</p>
+                  <p className="text-gray-600">Segunda a Sexta: 8h às 18h</p>
                   <p className="text-gray-600">Emergências: Consulte disponibilidade</p>
                 </div>
               </div>

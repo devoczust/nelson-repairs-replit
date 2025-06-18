@@ -60,7 +60,7 @@ export default function AboutSection() {
             </div>
 
             <a 
-              href="https://wa.me/5541999999999?text=Olá Nelson! Gostaria de conhecer melhor seus serviços." 
+              href="https://wa.me/5541999023899?text=Olá Nelson! Gostaria de conhecer melhor seus serviços." 
               className="bg-primary hover:bg-blue-800 text-white px-8 py-4 rounded-lg font-semibold transition-colors inline-flex items-center"
             >
               <i className="fab fa-whatsapp mr-2"></i>
