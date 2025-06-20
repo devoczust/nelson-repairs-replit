@@ -1,5 +1,6 @@
 import { CheckCircle, Award, Users, Clock, Star, Shield } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { SiWhatsapp } from "react-icons/si";
 
 export default function AboutSection() {
   return (
@@ -10,7 +11,7 @@ export default function AboutSection() {
           <div className="relative animate-slide-up">
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                src="https://images.unsplash.com/photo-1618090584126-129cd1f3fbae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
                 alt="Nelson Oczust - Profissional experiente em manutenção residencial" 
                 className="rounded-2xl shadow-warm w-full h-auto"
               />
@@ -18,7 +19,7 @@ export default function AboutSection() {
             </div>
             
             {/* Badge de qualidade */}
-            <div className="absolute -top-6 -right-6 bg-construction-yellow p-4 rounded-2xl shadow-construction animate-bounce-soft">
+            <div className="hidden md:block absolute -top-6 -right-6 bg-construction-yellow p-4 rounded-2xl shadow-construction animate-bounce-soft">
               <div className="text-center">
                 <Award className="text-warm-brown mx-auto mb-2" size={24} />
                 <div className="text-sm font-bold text-warm-brown">Qualidade<br />Garantida</div>
@@ -51,25 +52,6 @@ export default function AboutSection() {
               soluções práticas e duradouras. Seu compromisso é entregar trabalhos de qualidade 
               que fazem a diferença no conforto e segurança da sua família.
             </p>
-            
-            {/* Estatísticas */}
-            <div className="grid grid-cols-2 gap-6 mb-8">
-              <Card className="shadow-construction card-hover border-0 bg-gradient-to-br from-primary to-primary/80">
-                <CardContent className="text-center p-6">
-                  <Clock className="text-white mx-auto mb-3" size={32} />
-                  <div className="text-4xl font-bold text-white mb-2">35+</div>
-                  <div className="text-white/90 font-medium">Anos de Experiência</div>
-                </CardContent>
-              </Card>
-              
-              <Card className="shadow-construction card-hover border-0 bg-gradient-to-br from-construction-yellow to-orange-400">
-                <CardContent className="text-center p-6">
-                  <Star className="text-warm-brown mx-auto mb-3" size={32} />
-                  <div className="text-4xl font-bold text-warm-brown mb-2">500+</div>
-                  <div className="text-warm-brown/90 font-medium">Famílias Atendidas</div>
-                </CardContent>
-              </Card>
-            </div>
 
             {/* Características */}
             <div className="grid grid-cols-1 gap-4 mb-8">
@@ -118,7 +100,7 @@ export default function AboutSection() {
               href="https://wa.me/5541999023899?text=Olá Nelson! Gostaria de conhecer melhor seus serviços e solicitar um orçamento." 
               className="bg-whatsapp hover:bg-green-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 inline-flex items-center shadow-warm hover:shadow-xl hover:scale-105 group"
             >
-              <i className="fab fa-whatsapp mr-3 text-xl group-hover:scale-110 transition-transform"></i>
+              <SiWhatsapp className="mr-3 text-xl group-hover:scale-110 transition-transform" />
               Conversar com Nelson
             </a>
           </div>

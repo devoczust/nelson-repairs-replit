@@ -8,7 +8,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
-import { MessageCircle, Mail, MapPin, Clock, Phone, Send, User, Calendar, Shield } from "lucide-react";
+import { MessageCircle, Mail, MapPin, Clock, Phone, Send, User, Shield } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
 
 interface ContactFormData {
   name: string;
@@ -98,8 +99,8 @@ export default function ContactSection() {
           {/* Contact Info */}
           <div className="animate-slide-up">
             <Card className="bg-white shadow-warm border-0 h-full">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-warm-brown mb-8 flex items-center">
+              <CardContent className="p-2 pt-6 md:p-8">
+                <h3 className="ml-6 text-2xl font-bold text-warm-brown mb-8 flex items-center">
                   <Phone className="mr-3 text-primary" size={24} />
                   Fale Conosco
                 </h3>
@@ -107,7 +108,7 @@ export default function ContactSection() {
                 <div className="space-y-6 mb-8">
                   <div className="flex items-start p-4 bg-gradient-to-r from-whatsapp/10 to-green-50 rounded-xl">
                     <div className="w-12 h-12 bg-whatsapp rounded-xl flex items-center justify-center mr-4">
-                      <i className="fab fa-whatsapp text-white text-xl"></i>
+                      <SiWhatsapp className="text-white text-xl" />
                     </div>
                     <div>
                       <h4 className="font-bold text-gray-800 mb-1">WhatsApp Preferido</h4>
@@ -291,7 +292,7 @@ export default function ContactSection() {
                         href="https://wa.me/5541999023899?text=Olá Nelson! Encontrei seu site e gostaria de solicitar um orçamento para serviços de manutenção residencial." 
                         className="bg-whatsapp hover:bg-green-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 inline-flex items-center hover:scale-105 shadow-warm group"
                       >
-                        <i className="fab fa-whatsapp mr-2 text-lg group-hover:scale-110 transition-transform"></i>
+                        <SiWhatsapp className="mr-2 text-lg group-hover:scale-110 transition-transform" />
                         Conversar no WhatsApp
                       </a>
                     </div>

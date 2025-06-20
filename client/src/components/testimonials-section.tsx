@@ -1,27 +1,25 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote, MessageCircle, Heart } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
 
 const testimonials = [
   {
-    name: "Maria Silva",
+    name: "Giovana Maia",
     location: "Água Verde, Curitiba",
     service: "Serviços Elétricos",
     text: "Nelson é extremamente profissional e pontual. Resolveu todos os problemas elétricos da minha casa com muita qualidade. Recomendo para todos!",
-    avatar: "M"
   },
   {
-    name: "João Santos", 
+    name: "Eduardo Miranda", 
     location: "Batel, Curitiba",
     service: "Montagem de Móveis",
     text: "Serviço excelente! Nelson montou todos os móveis da minha casa nova. Trabalho limpo, rápido e com preço justo. Super recomendo!",
-    avatar: "J"
   },
   {
-    name: "Ana Costa",
+    name: "Ana Sampaio",
     location: "Centro, Curitiba", 
     service: "Pequenos Reparos",
     text: "Precisava de vários reparos pequenos em casa e Nelson resolveu tudo em uma visita. Muito eficiente e confiável. Virou meu 'marido de aluguel' oficial!",
-    avatar: "A"
   }
 ];
 
@@ -79,7 +77,7 @@ export default function TestimonialsSection() {
                 {/* Customer Info */}
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gradient-warm rounded-full flex items-center justify-center mr-4 text-white font-bold text-lg">
-                    {testimonial.avatar}
+                    {testimonial.name.charAt(0).toUpperCase()}
                   </div>
                   <div>
                     <div className="font-bold text-warm-brown">{testimonial.name}</div>
@@ -110,7 +108,7 @@ export default function TestimonialsSection() {
               href="https://wa.me/5541999023899?text=Olá Nelson! Vi os depoimentos no seu site e gostaria de solicitar um orçamento." 
               className="bg-whatsapp hover:bg-green-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 inline-flex items-center shadow-warm hover:shadow-xl hover:scale-105 group"
             >
-              <i className="fab fa-whatsapp mr-3 text-xl group-hover:scale-110 transition-transform"></i>
+              <SiWhatsapp className="mr-3 text-xl group-hover:scale-110 transition-transform" />
               Solicitar Meu Orçamento
             </a>
           </div>

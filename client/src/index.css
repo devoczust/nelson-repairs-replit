@@ -83,7 +83,7 @@
 
 @layer utilities {
   .bg-whatsapp {
-    background-color: hsl(var(--whatsapp));
+    background-color: hsl(142, 70%, 45%);
   }
   
   .text-whatsapp {
@@ -99,20 +99,12 @@
   }
 
   /* Cores customizadas para construção */
-  .bg-warm-brown {
-    background-color: hsl(var(--warm-brown));
-  }
-  
-  .text-warm-brown {
-    color: hsl(var(--warm-brown));
-  }
-  
   .bg-construction-yellow {
-    background-color: hsl(var(--construction-yellow));
+    background-color: hsl(45, 90%, 55%);
   }
   
   .text-construction-yellow {
-    color: hsl(var(--construction-yellow));
+    color: hsl(45, 90%, 55%);
   }
   
   .bg-safety-orange {
@@ -170,6 +162,14 @@
   
   .shadow-warm {
     box-shadow: 0 8px 32px rgba(139, 69, 19, 0.15);
+  }
+
+  .bg-warm-brown {
+    background-color: hsl(25, 35%, 35%);
+  }
+  
+  .text-warm-brown {
+    color: hsl(25, 35%, 35%);
   }
 }
 

@@ -46,9 +46,9 @@ export default function FaqSection() {
 
         <div className="space-y-6">
           {faqItems.map((item, index) => (
-            <Card key={index} className="shadow-sm border-0">
+            <Card key={index} className="shadow-sm border-0  hover:bg-gray-50">
               <button 
-                className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-lg" 
+                className="w-full p-6 text-left flex justify-between items-center transition-colors rounded-lg" 
                 onClick={() => toggleItem(index)}
               >
                 <span className="font-semibold text-lg">{item.question}</span>

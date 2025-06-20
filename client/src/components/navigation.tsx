@@ -1,14 +1,21 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Hammer, Phone, Star } from "lucide-react";
+import { Menu, X, Hammer, Phone } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
+    const navbar = document.querySelector('nav');
+    const offset = navbar ? navbar.clientHeight : 0;
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({
+        top: elementPosition - offset,
+        behavior: 'smooth',
+      });
     }
     setIsMenuOpen(false);
   };
@@ -22,9 +29,6 @@ export default function Navigation() {
             <div className="relative">
               <div className="w-10 h-10 bg-gradient-warm rounded-xl flex items-center justify-center mr-3 group-hover:scale-105 transition-transform duration-300">
                 <Hammer className="text-white" size={20} />
-              </div>
-              <div className="absolute -top-1 -right-1 w-4 h-4 bg-construction-yellow rounded-full flex items-center justify-center">
-                <Star className="text-warm-brown" size={10} />
               </div>
             </div>
             <div>
@@ -83,7 +87,7 @@ export default function Navigation() {
               href="https://wa.me/5541999023899?text=Olá Nelson! Encontrei seu site e gostaria de solicitar um orçamento." 
               className="bg-whatsapp hover:bg-green-600 text-white px-4 py-3 rounded-xl transition-all duration-300 hidden sm:flex items-center font-semibold hover:scale-105 shadow-warm group"
             >
-              <i className="fab fa-whatsapp mr-2 text-lg group-hover:scale-110 transition-transform"></i>
+              <SiWhatsapp className="mr-2 text-lg group-hover:scale-110 transition-transform" />
               WhatsApp
             </a>
             
@@ -147,7 +151,7 @@ export default function Navigation() {
                   href="https://wa.me/5541999023899?text=Olá Nelson! Encontrei seu site e gostaria de solicitar um orçamento." 
                   className="bg-whatsapp hover:bg-green-600 text-white px-4 py-3 rounded-xl transition-all duration-300 inline-flex items-center justify-center font-semibold"
                 >
-                  <i className="fab fa-whatsapp mr-2 text-lg"></i>
+                  <SiWhatsapp className="mr-2 text-lg" />
                   WhatsApp
                 </a>
               </div>

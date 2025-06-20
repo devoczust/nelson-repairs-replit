@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Zap, Wrench, Package, PaintBucket, Hammer, Tv, CheckCircle } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
 
 const services = [
   {
@@ -28,7 +29,7 @@ const services = [
     icon: Package,
     title: "Montagem de Móveis",
     description: "Montagem e desmontagem de móveis, estantes, racks, camas e móveis planejados.",
-    color: "bg-brown-500",
+    color: "bg-amber-700",
     items: [
       "Móveis planejados",
       "Estantes e racks",
@@ -142,7 +143,7 @@ export default function ServicesSection() {
               href="https://wa.me/5541999023899?text=Olá! Gostaria de solicitar um orçamento para serviços residenciais." 
               className="bg-whatsapp hover:bg-green-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 inline-flex items-center shadow-warm hover:shadow-xl hover:scale-105 group"
             >
-              <i className="fab fa-whatsapp mr-3 text-xl group-hover:scale-110 transition-transform"></i>
+              <SiWhatsapp className="mr-3 text-xl group-hover:scale-110 transition-transform" />
               Solicitar Orçamento Gratuito
             </a>
           </div>

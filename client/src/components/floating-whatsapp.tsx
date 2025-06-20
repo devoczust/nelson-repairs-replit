@@ -1,3 +1,5 @@
+import { SiWhatsapp } from "react-icons/si";
+
 export default function FloatingWhatsApp() {
   return (
     <div className="fixed bottom-6 right-6 z-50">
@@ -6,7 +8,7 @@ export default function FloatingWhatsApp() {
         className="bg-whatsapp hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 flex items-center justify-center"
         aria-label="Contatar via WhatsApp"
       >
-        <i className="fab fa-whatsapp text-2xl"></i>
+        <SiWhatsapp className="text-2xl text-white" />
       </a>
     </div>
   );
