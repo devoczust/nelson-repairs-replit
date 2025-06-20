@@ -6,6 +6,7 @@ import { z } from "zod";
 import session from "express-session";
 import connectPg from "connect-pg-simple";
 import puppeteer from "puppeteer";
+import { PHONE_TEXT } from "@/lib/phone";
 
 // Middleware to check if user is authenticated
 const requireAuth = (req: any, res: any, next: any) => {
@@ -209,7 +210,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           <div class="header">
             <div class="company-name">Nelson Oczust - Pequenas Reformas</div>
             <div class="company-info">
-              WhatsApp: (41) 99902-3899 | E-mail: nelsonoczust1975@gmail.com<br>
+              WhatsApp: ${PHONE_TEXT} | E-mail: nelsonoczust1975@gmail.com<br>
               Curitiba e Região Metropolitana
             </div>
           </div>

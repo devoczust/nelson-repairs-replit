@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button";
+import { PHONE } from "@/lib/phone";
 import { Hammer, Shield, Clock, Home, Users, Star } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
 
 export default function HeroSection() {
   const scrollToServices = () => {
-    const element = document.getElementById('servicos');
+    const element = document.getElementById("servicos");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -35,16 +36,19 @@ export default function HeroSection() {
                 Profissional Qualificado
               </div>
             </div>
-            
+
             <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight text-warm-brown drop-shadow">
               Pequenos Reparos e
-              <span className="text-construction-yellow block drop-shadow"> Manutenção</span>
+              <span className="text-construction-yellow block drop-shadow">
+                {" "}
+                Manutenção
+              </span>
               <span className="text-warm-brown"> Residencial</span>
             </h1>
-            
+
             <p className="text-xl mb-8 text-warm-brown/80 leading-relaxed">
-              Mais de 35 anos transformando lares em Curitiba com serviços de qualidade. 
-              Cuidamos da sua casa com carinho e profissionalismo!
+              Mais de 35 anos transformando lares em Curitiba com serviços de
+              qualidade. Cuidamos da sua casa com carinho e profissionalismo!
             </p>
 
             {/* Features */}
@@ -62,10 +66,10 @@ export default function HeroSection() {
                 <span className="font-medium">Atendimento Rápido</span>
               </div>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4">
-              <a 
-                href="https://wa.me/5541999023899?text=Olá! Gostaria de solicitar um orçamento para manutenção residencial." 
+              <a
+                href={`https://wa.me/${PHONE}?text=Olá! Gostaria de solicitar um orçamento para manutenção residencial.`}
                 className="bg-whatsapp hover:bg-green-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center shadow-warm hover:shadow-xl hover:scale-105 group"
               >
                 <SiWhatsapp className="mr-3 text-xl group-hover:scale-110 transition-transform" />
@@ -85,9 +89,9 @@ export default function HeroSection() {
           {/* Imagem e Stats */}
           <div className="relative animate-slide-up flex flex-col items-center">
             <div className="relative w-full max-w-md">
-              <img 
-                src="https://images.unsplash.com/photo-1645651964715-d200ce0939cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                alt="Profissional experiente trabalhando em manutenção residencial" 
+              <img
+                src="https://images.unsplash.com/photo-1645651964715-d200ce0939cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+                alt="Profissional experiente trabalhando em manutenção residencial"
                 className="rounded-2xl shadow-warm w-full h-auto card-hover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
@@ -97,17 +101,29 @@ export default function HeroSection() {
               <div className="bg-white/95 p-6 rounded-2xl shadow-warm border-2 border-primary/10 flex flex-col items-center min-w-[120px]">
                 <Home size={28} className="mb-2" />
                 <div className="text-3xl font-bold text-primary mb-1">500+</div>
-                <div className="text-warm-brown font-semibold text-xs text-center">Casas<br />Atendidas</div>
+                <div className="text-warm-brown font-semibold text-xs text-center">
+                  Casas
+                  <br />
+                  Atendidas
+                </div>
               </div>
               <div className="bg-white/95 p-6 rounded-2xl shadow-warm border-2 border-primary/10 flex flex-col items-center min-w-[120px]">
                 <Users size={28} className="mb-2" />
                 <div className="text-3xl font-bold text-primary mb-1">100%</div>
-                <div className="text-warm-brown font-semibold text-xs text-center">Satisfação<br />Garantida</div>
+                <div className="text-warm-brown font-semibold text-xs text-center">
+                  Satisfação
+                  <br />
+                  Garantida
+                </div>
               </div>
               <div className="hidden md:flex bg-white/95 p-6 rounded-2xl shadow-warm border-2 border-primary/10 flex-col items-center min-w-[120px]">
                 <Star size={28} className="mb-2" />
                 <div className="text-3xl font-bold text-primary mb-1">35+</div>
-                <div className="text-warm-brown font-semibold text-xs text-center">Anos de<br />Experiência</div>
+                <div className="text-warm-brown font-semibold text-xs text-center">
+                  Anos de
+                  <br />
+                  Experiência
+                </div>
               </div>
             </div>
           </div>

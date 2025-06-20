@@ -1,3 +1,4 @@
+import { PHONE, PHONE_TEXT } from "@/lib/phone";
 import { Hammer, Mail, MapPin } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
 
@@ -39,10 +40,10 @@ export default function Footer() {
                   <SiWhatsapp className="text-white text-xs" />
                 </div>
                 <a
-                  href="https://wa.me/5541999023899"
+                  href={`https://wa.me/${PHONE}`}
                   className="hover:text-white transition-colors"
                 >
-                  (41) 99902-3899
+                  {PHONE_TEXT}
                 </a>
               </li>
               <li className="flex items-center">

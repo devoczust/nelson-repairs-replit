@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { PHONE } from "@/lib/phone";
 import { Star, Quote, MessageCircle, Heart } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
 
@@ -10,17 +11,17 @@ const testimonials = [
     text: "Nelson é extremamente profissional e pontual. Resolveu todos os problemas elétricos da minha casa com muita qualidade. Recomendo para todos!",
   },
   {
-    name: "Eduardo Miranda", 
+    name: "Eduardo Miranda",
     location: "Batel, Curitiba",
     service: "Montagem de Móveis",
     text: "Serviço excelente! Nelson montou todos os móveis da minha casa nova. Trabalho limpo, rápido e com preço justo. Super recomendo!",
   },
   {
     name: "Ana Sampaio",
-    location: "Centro, Curitiba", 
+    location: "Centro, Curitiba",
     service: "Pequenos Reparos",
     text: "Precisava de vários reparos pequenos em casa e Nelson resolveu tudo em uma visita. Muito eficiente e confiável. Virou meu 'marido de aluguel' oficial!",
-  }
+  },
 ];
 
 export default function TestimonialsSection() {
@@ -37,14 +38,15 @@ export default function TestimonialsSection() {
             <span className="text-primary block">Clientes Dizem</span>
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Histórias reais de famílias que confiaram em nosso trabalho para cuidar de seus lares
+            Histórias reais de famílias que confiaram em nosso trabalho para
+            cuidar de seus lares
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card 
-              key={index} 
+            <Card
+              key={index}
               className="bg-white card-hover shadow-construction border-0 relative overflow-hidden animate-slide-up"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
@@ -80,7 +82,9 @@ export default function TestimonialsSection() {
                     {testimonial.name.charAt(0).toUpperCase()}
                   </div>
                   <div>
-                    <div className="font-bold text-warm-brown">{testimonial.name}</div>
+                    <div className="font-bold text-warm-brown">
+                      {testimonial.name}
+                    </div>
                     <div className="text-sm text-gray-500 flex items-center">
                       <Heart size={12} className="text-red-400 mr-1" />
                       {testimonial.location}
@@ -102,10 +106,11 @@ export default function TestimonialsSection() {
               Junte-se aos Nossos Clientes Satisfeitos!
             </h3>
             <p className="text-gray-600 mb-6">
-              Faça parte desta lista de famílias que confiam em nosso trabalho para cuidar de seus lares
+              Faça parte desta lista de famílias que confiam em nosso trabalho
+              para cuidar de seus lares
             </p>
-            <a 
-              href="https://wa.me/5541999023899?text=Olá Nelson! Vi os depoimentos no seu site e gostaria de solicitar um orçamento." 
+            <a
+              href={`https://wa.me/${PHONE}?text=Olá Nelson! Vi os depoimentos no seu site e gostaria de solicitar um orçamento.`}
               className="bg-whatsapp hover:bg-green-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 inline-flex items-center shadow-warm hover:shadow-xl hover:scale-105 group"
             >
               <SiWhatsapp className="mr-3 text-xl group-hover:scale-110 transition-transform" />
