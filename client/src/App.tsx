@@ -5,6 +5,10 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
 import NotFound from "@/pages/not-found";
+import AdminLogin from "@/pages/admin-login";
+import AdminDashboard from "@/pages/admin-dashboard";
+import AdminQuoteForm from "@/pages/admin-quote-form";
+import AdminQuoteDetail from "@/pages/admin-quote-detail";
 import { useEffect } from "react";
 import { initGA } from "./lib/analytics";
 import { useAnalytics } from "./hooks/use-analytics";
@@ -16,6 +20,11 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/admin/login" component={AdminLogin} />
+      <Route path="/admin/dashboard" component={AdminDashboard} />
+      <Route path="/admin/quote/new" component={() => <AdminQuoteForm />} />
+      <Route path="/admin/quote/:id" component={({ params }) => <AdminQuoteDetail quoteId={params.id} />} />
+      <Route path="/admin/quote/:id/edit" component={({ params }) => <AdminQuoteForm quoteId={params.id} isEdit={true} />} />
       <Route component={NotFound} />
     </Switch>
   );

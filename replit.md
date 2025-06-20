@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a full-stack web application for Nelson Oczust's handyman services business in Curitiba, Brazil. The application is built as a landing page showcasing small repairs and maintenance services ("marido de aluguel") with a contact form for customer inquiries. The stack uses React for the frontend, Express.js for the backend, and PostgreSQL with Drizzle ORM for data persistence.
+This is a comprehensive full-stack web application for Nelson Oczust's handyman services business in Curitiba, Brazil. The application includes a professional landing page showcasing small repairs and maintenance services ("marido de aluguel") with customer contact forms, plus a complete admin system for quote management and PDF generation. The stack uses React for the frontend, Express.js for the backend, PostgreSQL with Drizzle ORM for data persistence, and Puppeteer for PDF generation.
 
 ## System Architecture
 
@@ -26,16 +26,42 @@ This is a full-stack web application for Nelson Oczust's handyman services busin
 ## Key Components
 
 ### Database Schema
-- **Users Table**: Basic user authentication structure (not actively used in current implementation)
+- **Users Table**: Admin authentication with hashed passwords for secure access
 - **Contacts Table**: Stores customer inquiries with fields for name, phone, email, service type, message, and timestamp
+- **Quotes Table**: Complete quote management with items, customer details, pricing, and status tracking
+- **Sessions Table**: PostgreSQL session storage for admin authentication
 
 ### API Routes
+**Public Routes:**
 - `POST /api/contacts`: Submit contact form data
-- `GET /api/contacts`: Retrieve all contacts (admin-only, not exposed in frontend)
+
+**Admin Authentication:**
+- `POST /api/admin/login`: Admin login with session management
+- `POST /api/admin/logout`: Admin logout
+- `GET /api/admin/me`: Check authentication status
+- `POST /api/admin/setup`: Create initial admin user (one-time setup)
+
+**Admin Quote Management:**
+- `GET /api/admin/quotes`: List all quotes
+- `POST /api/admin/quotes`: Create new quote
+- `GET /api/admin/quotes/:id`: Get specific quote details
+- `PUT /api/admin/quotes/:id`: Update existing quote
+- `DELETE /api/admin/quotes/:id`: Delete quote
+- `GET /api/admin/quotes/:id/pdf`: Generate and download PDF quote
+
+**Admin Data Access:**
+- `GET /api/contacts`: Retrieve all customer contacts (admin-only)
 
 ### Frontend Pages
+**Public Pages:**
 - **Home Page**: Single-page application with sections for hero, services, about, testimonials, FAQ, and contact
 - **404 Page**: Simple not found page
+
+**Admin Panel:**
+- **Admin Login**: Secure authentication page for Nelson's access
+- **Admin Dashboard**: Overview with statistics, quote management, and contact viewing
+- **Quote Management**: Create, edit, view, and delete quotes with PDF export
+- **Quote Details**: Detailed view with print and PDF download options
 
 ### UI Components
 - Navigation with smooth scrolling
@@ -52,6 +78,9 @@ This is a full-stack web application for Nelson Oczust's handyman services busin
 1. **Contact Form Submission**: User fills contact form → Frontend validates with Zod → POST to `/api/contacts` → Backend validates and stores in database → Success/error response
 2. **Page Navigation**: Single-page app with smooth scrolling between sections
 3. **WhatsApp Integration**: Direct links to WhatsApp with pre-filled messages for quick customer contact
+4. **Admin Authentication**: Login with credentials → Session creation with PostgreSQL storage → Protected route access
+5. **Quote Management**: Create/edit quotes with multiple items → JSON storage in database → PDF generation with Puppeteer
+6. **PDF Export**: Professional quote layout with company branding → Server-side PDF generation → Direct download
 
 ## External Dependencies
 
@@ -89,6 +118,13 @@ This is a full-stack web application for Nelson Oczust's handyman services busin
 ## Changelog
 - June 18, 2025. Initial setup
 - June 18, 2025. Updated contact information: phone number to 41999023899, email to nelsonoczust1975@gmail.com, work hours (removed Saturday), fixed button styling, and replaced hero image
+- June 20, 2025. Complete admin system implementation:
+  - Added PostgreSQL database integration with Drizzle ORM
+  - Implemented secure admin authentication with session management
+  - Created comprehensive quote management system with CRUD operations
+  - Added professional PDF export functionality using Puppeteer
+  - Built responsive admin dashboard with statistics and contact management
+  - Admin credentials: username "nelson", password "nelson123456"
 
 ## User Preferences
 
