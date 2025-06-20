@@ -107,7 +107,7 @@ export default function ContactSection() {
                 <div className="space-y-6 mb-8">
                   <div className="flex items-start p-4 bg-gradient-to-r from-whatsapp/10 to-green-50 rounded-xl">
                     <div className="w-12 h-12 bg-whatsapp rounded-xl flex items-center justify-center mr-4">
-                      <MessageCircle className="text-white" size={20} />
+                      <i className="fab fa-whatsapp text-white text-xl"></i>
                     </div>
                     <div>
                       <h4 className="font-bold text-gray-800 mb-1">WhatsApp Preferido</h4>

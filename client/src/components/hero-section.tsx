@@ -99,21 +99,21 @@ export default function HeroSection() {
             </div>
             
             {/* Cards de Estatísticas */}
-            <div className="absolute -bottom-8 -left-6 bg-white p-6 rounded-2xl shadow-warm animate-scale-in">
+            <div className="absolute -bottom-8 -left-6 bg-white p-6 rounded-2xl shadow-warm animate-scale-in border-2 border-primary/10">
               <div className="text-center">
                 <div className="text-4xl font-bold text-primary mb-1">35+</div>
                 <div className="text-warm-brown font-semibold text-sm">Anos de<br />Experiência</div>
               </div>
             </div>
             
-            <div className="absolute -top-6 -right-6 bg-construction-yellow p-4 rounded-2xl shadow-construction animate-scale-in">
+            <div className="absolute -top-6 -right-6 bg-construction-yellow p-4 rounded-2xl shadow-construction animate-scale-in border-2 border-warm-brown/20">
               <div className="text-center">
                 <div className="text-2xl font-bold text-warm-brown mb-1">500+</div>
                 <div className="text-warm-brown font-semibold text-xs">Casas<br />Atendidas</div>
               </div>
             </div>
 
-            <div className="absolute top-1/2 -left-8 bg-safety-orange p-4 rounded-2xl shadow-warm animate-scale-in">
+            <div className="absolute top-1/2 -left-8 bg-primary p-4 rounded-2xl shadow-warm animate-scale-in border-2 border-white/20">
               <div className="text-center">
                 <div className="text-2xl font-bold text-white mb-1">100%</div>
                 <div className="text-white font-semibold text-xs">Satisfação<br />Garantida</div>

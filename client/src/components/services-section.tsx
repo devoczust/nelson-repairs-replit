@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Zap, Wrench, Sofa, PaintBucket, Hammer, Tv, CheckCircle } from "lucide-react";
+import { Zap, Wrench, Package, PaintBucket, Hammer, Tv, CheckCircle } from "lucide-react";
 
 const services = [
   {
@@ -25,7 +25,7 @@ const services = [
     ]
   },
   {
-    icon: Sofa,
+    icon: Package,
     title: "Montagem de Móveis",
     description: "Montagem e desmontagem de móveis, estantes, racks, camas e móveis planejados.",
     color: "bg-brown-500",
